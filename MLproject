@@ -1,0 +1,14 @@
+name:  Stable Diffusion Fashion Mnist
+
+entry_points:
+  main:
+    command: "python src/main.py"
+ 
+  train:
+    command: "python src/train.py"
+
+  convert:
+    parameters:
+      model_path: {type=str}
+      convert_type: {type=str}
+    command: "python src/convert_model.py --model_path {model_path} --convert_type {convert_type}"
